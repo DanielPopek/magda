@@ -169,7 +169,7 @@ class TestInterfaces:
         assert 3 == len(pipeline.modules)
         assert issubclass(pipeline.modules[0].interface, MockCorrectDependingInterface)
         assert issubclass(pipeline.modules[1].interface, MockCorrectDependingInterface)
-        assert pipeline.modules[2].input_modules == ['mod1', 'mod2']
+        assert pipeline.modules[2].input_modules == ['mod1', 'mod2',  'mod3']
 
     def test_can_produce_correct_interface(self):
         @produce(MockCorrectInterface)
